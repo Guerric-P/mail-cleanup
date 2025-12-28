@@ -2,15 +2,19 @@
   "name": "mail-cleanup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fast-xml-parser": "^5.3.3",
     "imap-simple": "^5.1.0",
     "moment": "^2.30.1"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/imap-simple": "^4.2.10"
+  }
 }

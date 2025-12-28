@@ -1,9 +1,9 @@
 import { connect } from 'imap-simple';
-import { config } from './config.js';
+import { config } from './config.ts';
 import moment from 'moment';
 
 
-async function getMailboxSize(mailboxName, fetchSize = false) {
+async function getMailboxSize(mailboxName: string, fetchSize = false) {
 
     const connection = await connect(config);
 
@@ -69,4 +69,7 @@ async function checkMailboxSizes() {
     await getMailboxSize('INBOX/OUTBOX', true);
 }
 
-checkMailboxSizes();
+export { getMailboxSize, checkMailboxSizes };
+
+// Uncomment to run:
+// checkMailboxSizes();

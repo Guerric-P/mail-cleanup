@@ -1,6 +1,6 @@
 import { connect } from 'imap-simple';
 import moment from 'moment';
-import { config } from './config.js';
+import { config } from './config.ts';
 
 // Set the date threshold (e.g., delete emails older than 30 days)
 const deleteBeforeDate = moment();
@@ -38,4 +38,7 @@ async function deleteOldEmails() {
     }
 }
 
-deleteOldEmails();
+export { deleteOldEmails };
+
+// Uncomment to run:
+// deleteOldEmails();
